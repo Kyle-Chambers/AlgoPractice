@@ -26,8 +26,9 @@ function anagrams(stringA, stringB) {
             return false;
         }
     }
-    
+
     return true;
 }
+
 
 module.exports = anagrams;
