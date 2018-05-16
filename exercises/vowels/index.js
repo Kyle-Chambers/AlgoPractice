@@ -7,18 +7,13 @@
 //   vowels('Why do you ask?') --> 4
 //   vowels('Why?') --> 0
 
-let v = {
-    'a': true,
-    'e': true,
-    'i': true,
-    'o': true,
-    'u': true
-}
+
 
 function vowels(str) {
     let vowelCount = 0;
+    let v = ['a','e','i','o','u'];
     for (let letter of str.toLowerCase()){
-        if (v[letter]){
+        if (v.includes(letter)){
             vowelCount++;
         }
     }
