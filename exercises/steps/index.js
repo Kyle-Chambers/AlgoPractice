@@ -32,7 +32,6 @@
 // }
 
 function steps (n, row = 0, stair = '') {
-    debugger;
     if (n === row) {
         return;
     }
