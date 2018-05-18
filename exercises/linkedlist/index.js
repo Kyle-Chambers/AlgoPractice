@@ -60,7 +60,7 @@ class LinkedList {
 
         let prev = this.head
         let node = this.head.next;
-        
+
         while (node.next) {
             prev = node;
             node = node.next;
@@ -68,6 +68,20 @@ class LinkedList {
         prev.next = null;
     }
 
+    insertLast(value) {
+        if (!this.head){
+            this.insertFirst(value);
+            return;
+        }
+
+        let node = this.head;
+        
+        while (node.next) {
+            node = node.next;
+        }
+
+        node.next = new Node(value);
+    }
 }
 
 module.exports = { Node, LinkedList };
