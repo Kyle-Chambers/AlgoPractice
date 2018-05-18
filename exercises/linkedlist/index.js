@@ -44,6 +44,9 @@ class LinkedList {
         this.head = null;
     }
 
+    removeFirst () {
+        this.head = this.head.next;
+    }
 
 }
 
