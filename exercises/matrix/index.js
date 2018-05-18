@@ -50,14 +50,11 @@ function matrix(n) {
         rowEnd--;
 
 
-        
         for (let i = rowEnd; i >= rowIndex; i--) {
             result[i][columnIndex] = counter;
             counter++
         }
         columnIndex++;
-
-        
     }
 
     return result;
