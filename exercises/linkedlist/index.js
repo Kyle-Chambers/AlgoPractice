@@ -3,7 +3,7 @@
 // See 'directions' document
 
 class Node {
-    constructor(data, next) {
+    constructor(data, next = null) {
         this.data = data;
         this.next = next;
     }
@@ -15,7 +15,17 @@ class LinkedList {
     }
 
     insertFirst(value) {
-        this.head = new Node(value);
+        this.head = new Node(value, this.head);
+    }
+
+    size () {
+        let nodeCount = 0;
+        let current = this.head;
+        while (current){
+            nodeCount++;
+            current = current.next;
+        }
+        return nodeCount;
     }
 }
 
