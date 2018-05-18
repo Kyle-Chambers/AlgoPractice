@@ -27,6 +27,12 @@ class LinkedList {
         }
         return nodeCount;
     }
+
+    getFirst() {
+        return this.head;
+    }
+
+    
 }
 
 module.exports = { Node, LinkedList };
