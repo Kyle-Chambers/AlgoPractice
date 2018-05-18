@@ -20,10 +20,10 @@ class LinkedList {
 
     size () {
         let nodeCount = 0;
-        let current = this.head;
-        while (current){
+        let node = this.head;
+        while (node){
             nodeCount++;
-            current = current.next;
+            node = node.next;
         }
         return nodeCount;
     }
@@ -32,7 +32,14 @@ class LinkedList {
         return this.head;
     }
 
-    
+    getLast() {
+        let node = this.head;
+        while(node.next){
+            node = node.next;
+        }
+        return node;
+    }
+
 }
 
 module.exports = { Node, LinkedList };
