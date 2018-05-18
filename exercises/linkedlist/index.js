@@ -75,12 +75,25 @@ class LinkedList {
         }
 
         let node = this.head;
-        
+
         while (node.next) {
             node = node.next;
         }
 
         node.next = new Node(value);
+    }
+
+    getAt(index) {
+        let i = 0;
+        let node = this.head;
+        while (node){
+            if (i === index){
+                return node;
+            }
+            node = node.next;
+            i++;
+        }
+        return null;
     }
 }
 
