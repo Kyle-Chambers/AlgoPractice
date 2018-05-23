@@ -95,6 +95,25 @@ class LinkedList {
         }
         return null;
     }
+
+    removeAt(index) {
+        if (!this.head){
+            return;
+        }
+
+        if (index === 0){
+            this.head = this.head.next;
+            return;
+        }
+
+        let prev = this.getAt(index -1);
+
+        if (!prev || !prev.next) {
+            return;
+        }
+
+        prev.next = prev.next.next;
+    }
 }
 
 module.exports = { Node, LinkedList };
