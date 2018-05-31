@@ -88,7 +88,7 @@ class LinkedList {
         let node = this.head;
         while (node){
             if (i === index){
-                return node;
+            return node;
             }
             node = node.next;
             i++;
@@ -129,8 +129,14 @@ class LinkedList {
         let prev = this.getAt(index -1) || this.getLast();
         let node = new Node(val, prev.next);
         prev.next = node;
+    }
 
-
+    forEach(cb){
+        let node = this.head;
+        while(node){
+            cb(node.data)
+            node = node.next;
+        }
     }
 }
 
