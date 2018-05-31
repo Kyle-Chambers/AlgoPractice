@@ -21,13 +21,9 @@ class Node {
     }
 
     remove (val) {
-        let index = null;
-        this.children.forEach((node, i) => {
-            if (node.data === val){
-                index = i;
-            }
+        this.children = this.children.filter((node) => {
+            return node.data !== val;
         });
-        this.children.splice(index, 1);
     }
 
 }
