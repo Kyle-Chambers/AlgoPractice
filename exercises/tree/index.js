@@ -25,11 +25,12 @@ class Node {
             return node.data !== val;
         });
     }
-
 }
 
 class Tree {
-
+    constructor(root = null){
+        this.root = root;
+    }
 }
 
 module.exports = { Tree, Node };
