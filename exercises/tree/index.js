@@ -31,6 +31,23 @@ class Tree {
     constructor(root = null){
         this.root = root;
     }
+
+  traverseBF(fn) {
+    const arr = [this.root];
+    while (arr.length) {
+      const node = arr.shift();
+
+      arr.push(...node.children);
+      fn(node);
+    }
+  }
+
+    // traverseDF(cb, node = this.root) {
+    //     cb(node);
+    //     node.children.forEach((node) => {
+    //         this.traverseBF(cb, node)
+    //     });
+    // }
 }
 
 module.exports = { Tree, Node };
