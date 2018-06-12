@@ -24,7 +24,7 @@ describe('Node', () => {
     const n = new Node('a');
     n.add('b');
     expect(n.children.length).toEqual(1);
-    n.remove('b');
+    n.remove('b');                
     expect(n.children.length).toEqual(0);
   });
 });
